@@ -2,13 +2,13 @@
 
 `npx create-react-app my-app`\
 `cd my-app`\
-`npm start`\
+`npm start`
 
 
-A porta 3000 irá abrir automaticamente no navegador padrão para a visualização do projeto
+A porta 3000 irá abrir automaticamente no navegador padrão para a visualização do projeto.\
 Ou abra manualmente em: [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
-A página irá recarregar quando mudanças ocorrerem.
+A página irá recarregar quando mudanças ocorrerem.\
 Você deverá visualizar erros no seu console/terminal.
 
 # API de apoio para a construção do projeto
