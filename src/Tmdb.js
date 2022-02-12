@@ -1,5 +1,5 @@
 const API_KEY = '18fac4ba21e473ee1f57754a64880e3e';
-
+const API_BASE = "https://api.themoviedb.org/3"
 /*
 -originais netflix
 -trending
