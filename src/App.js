@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Tmdb from "./Tmdb";
 import MovieRow from "./components/MovieRow";
+import FeatureMovie from "./components/FeatureMovie";
 import './App.css';
 
 export default () => {
@@ -20,6 +21,9 @@ export default () => {
   }, []);
   return(
     <div className="page">
+
+    <FeatureMovie  />
+
       <section className="lists">
         {movieList.map((item, key)=>(
           <MovieRow key={key} title={item.title} items={item.items}/>
