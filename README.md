@@ -24,3 +24,7 @@ Acesso em [http://jsonviewer.stack.hu](http://jsonviewer.stack.hu)
 # Esta faz uma requisição HTTP e retorna parâmetros JSON
 Acesso em [https://resttesttest.com](https://resttesttest.com)
 ![image](https://user-images.githubusercontent.com/19197082/152628281-5f68d53d-5259-4273-9d37-476827d61e80.png)
+
+# Utilização do Google Fonts
+Acesso em [https://fonts.google.com/](https://fonts.google.com)
+![image](https://user-images.githubusercontent.com/19197082/156096409-e1e13544-a7b6-4c3a-8b14-07bd215d9e27.png)
