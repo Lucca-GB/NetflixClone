@@ -7,6 +7,7 @@ import './App.css';
 export default () => {
 
   const [movieList, setMovieList] = useState([]);
+  const [featuredData, setFeaturedData] = useState(null);
 
 //useEffect serve para executar as funções inseridas toda vez que redenrizarmos a página
   useEffect(()=> {
@@ -15,6 +16,16 @@ export default () => {
       // pegando a lista TOTAL
       let list = await Tmdb.getHomeList();
       setMovieList(list);
+
+      // pegando o Featured (filme em destaque)
+      //filtra pelos filmes orignais
+      let originals = list.filter(i=>i.slug === 'originals');
+      //gera um item aleatório de acordo com a quantidade de itens na lista
+      let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
+      //escolhe um item aleatório
+      let chosen = originals[0].items.results[randomChosen];
+
+      console.log(chosen)
     }
 
     loadAll();
@@ -22,7 +33,9 @@ export default () => {
   return(
     <div className="page">
 
-    <FeatureMovie  />
+      {featuredData &&
+          <FeatureMovie item={featuredData} />
+        }
 
       <section className="lists">
         {movieList.map((item, key)=>(
