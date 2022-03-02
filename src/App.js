@@ -24,8 +24,9 @@ export default () => {
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       //escolhe um item aleatório
       let chosen = originals[0].items.results[randomChosen];
-
-      console.log(chosen)
+      //pegamos as informações do filme escolhido
+      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
+      setFeaturedData(chosenInfo);
     }
 
     loadAll();
