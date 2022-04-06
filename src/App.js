@@ -3,11 +3,13 @@ import Tmdb from "./Tmdb";
 import MovieRow from "./components/MovieRow";
 import FeatureMovie from "./components/FeatureMovie";
 import './App.css';
+import Header from "./components/Header";
 
 export default () => {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
 
 //useEffect serve para executar as funções inseridas toda vez que redenrizarmos a página
   useEffect(()=> {
@@ -31,8 +33,27 @@ export default () => {
 
     loadAll();
   }, []);
+
+  useEffect(() => {
+      const scrollListener = () => {
+        if(window.scrollY > 10){
+          setBlackHeader(true)
+        }
+        else{
+          setBlackHeader(false);
+        }
+      }
+
+      window.addEventListener('scroll', scrollListener);
+
+      return () => {
+        window.removeEventListener('scroll', scrollListener);
+      }
+  }, []);
+
   return(
     <div className="page">
+      <Header black={blackHeader}/>
 
       {featuredData &&
           <FeatureMovie item={featuredData} />
@@ -43,6 +64,10 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items}/>
         ))}
       </section>
+
+      <footer>
+        
+      </footer>
     </div>
   );
 }
