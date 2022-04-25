@@ -66,7 +66,9 @@ export default () => {
       </section>
 
       <footer>
-        
+        Feito com <span role='img' arial-label='coração'>❤</span> pela B7WEB
+        Direitos de imagem para Netflix<br/>
+        Dados pegos do site Themoviedb.org
       </footer>
     </div>
   );
